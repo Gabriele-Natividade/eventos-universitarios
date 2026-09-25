@@ -1,15 +1,20 @@
-type EventCardProps = {
-  title: string;
-  location: string;
-  date: string;
-};
+import type { Event } from "../types/event";
 
-export function EventCard({ title, location, date }: EventCardProps) {
+export function EventCard({
+  title,
+  location,
+  date,
+  capacity,
+  id,
+  description,
+}: Event) {
   return (
-    <article>
+    <article id={id.toString()}>
       <h2>{title}</h2>
       <p>{location}</p>
       <p>{date}</p>
+      <p>Capacidade: {capacity}</p>
+      {description && <p>{description}</p>}
     </article>
   );
 }
