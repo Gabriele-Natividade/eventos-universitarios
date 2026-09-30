@@ -1,14 +1,6 @@
 import type { Event } from "../types/event";
 
 export const events: Event[] = [
-  export type Event = {
-  id: number;
-  title: string;
-  location: string;
-  date: string;
-  capacity: number;
-  description: string;
-};
   {
     id: 1,
     title: "Semana de Engenharia de Software",
