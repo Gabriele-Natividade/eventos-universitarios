@@ -4,5 +4,5 @@ export type Event = {
   location: string;
   date: string;
   capacity: number;
-  description?: string; // Propriedade opcional para os exercícios graduais
+  description: string;
 };
