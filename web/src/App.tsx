@@ -1,29 +1,45 @@
-import { useState } from "react";
-import { events } from "./data/events";
-import { EventCard } from "./components/EventCard";
+import type { Event } from "../types/event";
 
-export default function App() {
-  const [count, setCount] = useState(0);
-
-  return (
-    <main style={{ maxWidth: "600px", margin: "40px auto", padding: "0 16px" }}>
-      <h1 style={{ fontFamily: "sans-serif", marginBottom: "24px" }}>
-        Lista de Eventos
-      </h1>
-
-      <button onClick={() => setCount(count + 1)}>Cliquei {count} vezes</button>
-
-      {events.map((event) => (
-        <EventCard
-          key={event.id}
-          title={event.title}
-          location={event.location}
-          date={event.date}
-          capacity={event.capacity}
-          id={event.id}
-          description={event.description}
-        />
-      ))}
-    </main>
-  );
-}
+export const events: Event[] = [
+  export type Event = {
+  id: number;
+  title: string;
+  location: string;
+  date: string;
+  capacity: number;
+  description: string;
+};
+  {
+    id: 1,
+    title: "Semana de Engenharia de Software",
+    location: "Auditório A",
+    date: "15 de outubro, 19h",
+    capacity: 80,
+    description: "Evento sobre tecnologia e engenharia de software.",
+  },
+  {
+    id: 2,
+    title: "Workshop de React",
+    location: "Laboratório 02",
+    date: "18 de outubro, 14h",
+    capacity: 40,
+    description: "Workshop introdutório sobre React e componentes.",
+  },
+  {
+    id: 3,
+    title: "Palestra sobre Inteligência Artificial",
+    location: "Auditório Principal",
+    date: "20 de outubro, 18h",
+    capacity: 120,
+    description:
+      "Discussão sobre aplicações atuais de inteligência artificial.",
+  },
+  {
+    id: 4,
+    title: "Encontro de Desenvolvedores",
+    location: "Sala 15",
+    date: "25 de outubro, 16h",
+    capacity: 30,
+    description: "Encontro para troca de experiências entre estudantes.",
+  },
+];
